@@ -1,44 +1,461 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#116c61"><title>IDECO • Kế hoạch & Checklist Mobile</title>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b5c4c">
+<title>Kế hoạch & Checklist · IDECO Mobile</title>
 <style>
-:root{font-family:system-ui,-apple-system,'Segoe UI',Arial,sans-serif;color:#1a3140;background:#f2f6f6}*{box-sizing:border-box}body{margin:0;padding-bottom:calc(90px + env(safe-area-inset-bottom))}button,input,textarea,select{font:inherit}button{cursor:pointer;border:0}header{position:sticky;top:0;z-index:5;background:linear-gradient(120deg,#0e695d,#109580);color:#fff;padding:18px 17px 13px;box-shadow:0 5px 17px #004b3d27}.top{display:flex;align-items:center;gap:12px}.brand{width:44px;height:44px;background:#fff;color:#087460;border-radius:13px;display:grid;place-items:center;font-weight:1000}.top h1{margin:0;font-size:19px}.top small{font-size:11px;opacity:.85}.sync{margin-left:auto;font-size:11px;background:#ffffff29;padding:7px 9px;border-radius:25px;max-width:110px;text-align:center}.wrap{max-width:770px;margin:auto;padding:15px}.banner{background:#e6f7ee;border:1px solid #b5e6d2;border-radius:14px;color:#176650;padding:12px;font-size:12px;line-height:1.5;margin-bottom:13px}.card{background:white;border:1px solid #e1eaea;border-radius:18px;padding:16px;box-shadow:0 5px 20px #133a3a0a;margin:0 0 14px}.section-title{font-size:17px;font-weight:850;margin:4px 0 13px}.row{display:flex;gap:10px;align-items:center}.split{display:grid;grid-template-columns:1fr 1fr;gap:10px}label{display:block;font-size:12px;font-weight:750;color:#526b75;margin:12px 0 6px}input:not([type=checkbox]),select,textarea{display:block;width:100%;background:#fbfdfd;border:1px solid #d5e3e3;border-radius:12px;color:#1d3640;padding:13px;outline:none;font-size:16px}input:focus,textarea:focus,select:focus{border-color:#219b84;box-shadow:0 0 0 3px #1aad931a}textarea{min-height:91px;resize:vertical}.btn{padding:12px 15px;border-radius:12px;background:#e9f3f2;color:#12675d;font-size:13px;font-weight:800;min-height:45px}.btn.primary{background:#0e806f;color:#fff}.btn.danger{background:#ffecec;color:#ae302b}.btn.light{background:#fff;border:1px solid #dce9e6}.btn.small{min-height:36px;padding:7px 10px;font-size:12px}.btn:disabled{opacity:.5}.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.subtitle{font-size:12px;color:#71858c;margin:5px 0}.task{padding:12px 0;border-bottom:1px solid #edf1f2}.task:last-child{border-bottom:0}.task-title{font-weight:750;overflow-wrap:anywhere}.muted{color:#788991;font-size:12px}.pill{border-radius:30px;background:#e8f6ef;color:#18735c;font-size:11px;font-weight:750;padding:5px 9px}.dayheading{display:flex;align-items:center;justify-content:space-between;margin:13px 0 7px;font-weight:850;color:#1a615b}.empty{padding:26px 10px;text-align:center;color:#87969b;font-size:13px}.bottom{position:fixed;bottom:0;left:0;right:0;background:white;box-shadow:0 -6px 24px #172c2c12;display:grid;grid-template-columns:repeat(4,1fr);padding:7px 7px calc(7px + env(safe-area-inset-bottom));z-index:7}.tab{background:none;color:#74868d;border-radius:12px;padding:9px 3px;display:grid;gap:3px;place-items:center;font-size:11px;font-weight:750}.tab strong{font-size:21px}.tab.active{background:#e8f6f0;color:#097765}.hide{display:none!important}.toast{position:fixed;left:12px;right:12px;bottom:calc(90px + env(safe-area-inset-bottom));z-index:10;color:#fff;background:#194c4b;border-radius:12px;padding:14px;box-shadow:0 9px 30px #0004;display:none;font-size:13px}.toast.show{display:block}.monthlist .item{border-bottom:1px solid #e9eeee;padding:12px 0}.kpi{font-size:14px;font-weight:800;color:#147966}.check{width:22px;height:22px;accent-color:#12846c;flex:none}.modal{position:fixed;inset:0;z-index:20;background:#102c35ad;display:flex;align-items:flex-end;justify-content:center}.sheet{width:100%;max-width:770px;background:white;border-radius:22px 22px 0 0;padding:20px 17px calc(25px + env(safe-area-inset-bottom));max-height:92dvh;overflow:auto}.sheet h2{margin:0 0 12px;font-size:19px}.report{border:1px solid #dce8e7;border-radius:13px;padding:12px;margin-bottom:10px}.report p{white-space:pre-wrap;font-size:13px;overflow-wrap:anywhere}.archive{border-bottom:1px solid #e5eded;padding:12px 0}.note{font-size:12px;color:#8c5a22;background:#fff8df;padding:10px;border-radius:10px;margin-top:12px}@media(min-width:700px){.bottom{max-width:770px;margin:auto;border-radius:17px 17px 0 0}.sheet{border-radius:22px;margin-bottom:18px}.modal{align-items:flex-end}}
-</style></head><body>
-<header><div class="top"><div class="brand">ID</div><div><h1>Kế hoạch & Checklist</h1><small>IDECO PHARMA · Mobile Workspace</small></div><div class="sync" id="sync">Đang kết nối…</div></div></header>
-<div class="wrap">
-<div class="banner">📡 Dữ liệu dùng chung với ứng dụng Kế hoạch & Báo cáo IDECO. Mỗi lần bấm Lưu, hệ thống chờ Firebase xác nhận rồi mới báo thành công.</div>
-<section id="v-home"><div class="card"><div class="section-title">👤 Người lập kế hoạch</div><label>Nhân viên</label><input id="employee" list="employeeList" placeholder="Nhập họ tên nhân viên"><datalist id="employeeList"></datalist><label>Bộ phận</label><select id="department"><option value="">— Chọn bộ phận —</option><option>Bộ Phận Kinh Doanh</option><option>Bộ Phận Kho Vận</option><option>Bộ phận kế toán</option><option>Bộ phận SOP</option><option>Ban Giám Đốc</option></select><label>Tuần bắt đầu (chọn ngày bất kỳ trong tuần)</label><input type="date" id="weekDate"><label>Mục tiêu trọng tâm tuần</label><textarea id="objective" placeholder="Mục tiêu doanh số, khách hàng, quản lý công việc…"></textarea><div class="actions"><button class="btn primary" id="newPlan">＋ Lập kế hoạch mới</button><button class="btn" id="loadLatest">↻ Tìm tuần mới nhất</button></div><p class="subtitle" id="planStatus">Chưa chọn bản kế hoạch.</p></div><div class="card"><div class="section-title">📚 Kế hoạch đã lập</div><div id="plansList" class="monthlist"><div class="empty">Đang tải kế hoạch…</div></div></div></section>
-<section id="v-plan" class="hide"><div class="card"><div class="row" style="justify-content:space-between"><div><div class="section-title">🗓️ Công việc trong tuần</div><div class="subtitle" id="planInfo"></div></div><button class="btn small" id="newTask">＋ Việc</button></div><div id="taskList"></div><div class="actions"><button class="btn primary" id="savePlan">✓ Lưu kế hoạch</button></div></div></section>
-<section id="v-check" class="hide"><div class="card"><div class="row" style="justify-content:space-between"><div class="section-title">☑️ Checklist tháng</div><button class="btn small" id="addCheck">＋ Thêm</button></div><p class="subtitle">Checklist lưu trực tiếp trong bản kế hoạch hiện tại, đúng cấu trúc bản gốc.</p><div id="checks"></div><div class="actions"><button class="btn primary" id="saveCheck">✓ Lưu checklist</button></div></div></section>
-<section id="v-report" class="hide"><div class="card"><div class="section-title">📝 Khai báo kết quả tuần</div><label>Tên báo cáo tuần</label><input id="reportName" placeholder="Ví dụ: Báo cáo công việc tuần 26/10"><label>Kết quả thực tế đạt được</label><textarea id="actual" placeholder="Kết quả, chỉ tiêu đạt được, những việc còn tồn đọng…"></textarea><label>Nội dung báo cáo bổ sung</label><textarea id="reportContent" placeholder="Khó khăn, nguyên nhân, đề xuất, kế hoạch xử lý…"></textarea><div class="actions"><button id="saveReport" class="btn primary">✓ Lưu báo cáo tuần</button></div><p class="subtitle">Báo cáo mới được ghi vào savedReports của kế hoạch tuần, ứng dụng chính đọc được.</p></div><div class="card"><div class="section-title">Báo cáo đã lưu</div><div id="reports"></div></div></section>
-</div><nav class="bottom"><button class="tab active" data-tab="home"><strong>⌂</strong>Danh sách</button><button class="tab" data-tab="plan"><strong>▦</strong>Kế hoạch</button><button class="tab" data-tab="check"><strong>☑</strong>Checklist</button><button class="tab" data-tab="report"><strong>▤</strong>Báo cáo</button></nav><div id="toast" class="toast" role="status"></div><div id="modal" class="modal hide"><div class="sheet"><h2 id="modalTitle">Công việc</h2><label>Tên công việc</label><textarea id="editName"></textarea><div class="split"><div><label>Ngày bắt đầu</label><input id="editStart" type="date"></div><div><label>Ngày kết thúc</label><input id="editEnd" type="date"></div></div><label>Kết quả mong đợi</label><textarea id="editExpected"></textarea><label>Kết quả đã thực hiện</label><textarea id="editActual"></textarea><div class="actions"><button class="btn primary" id="applyTask">✓ Cập nhật</button><button class="btn light" id="cancelTask">Đóng</button><button class="btn danger" id="deleteTask">Xóa việc</button></div></div></div>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+:root{--g:#08745e;--g2:#0b5c4c;--mint:#e9f7f2;--line:#dfe9e5;--ink:#14213d;--mut:#65758b;--red:#d92d20;--amb:#b45309;--bg:#f2f6f4}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+button,input,select,textarea{font:inherit;color:inherit}
+.hidden{display:none!important}
+header{position:sticky;top:0;z-index:30;background:linear-gradient(115deg,#075d4d,#0c8067 60%,#14a37f);color:#fff;padding:calc(10px + env(safe-area-inset-top)) 14px 10px;box-shadow:0 6px 18px #075d4d33}
+.hrow{display:flex;align-items:center;gap:10px}
+.logo{width:36px;height:36px;border-radius:11px;background:#fff;color:var(--g);display:grid;place-items:center;font-weight:900;font-size:14px;flex:none}
+.htxt{min-width:0;flex:1}.htxt b{display:block;font-size:16px}.htxt span{font-size:11.5px;opacity:.85}
+.iconbtn{border:0;background:#ffffff22;color:#fff;width:36px;height:36px;border-radius:11px;font-size:17px;flex:none;cursor:pointer}
+.who{margin-top:9px;display:flex;gap:6px;align-items:center;font-size:12.5px;background:#ffffff1c;border-radius:10px;padding:6px 9px;cursor:pointer}
+.who b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tabs{display:flex;gap:6px;margin-top:9px}
+.tab{flex:1;border:0;border-radius:10px;padding:8px 4px;background:#ffffff1f;color:#fff;font-weight:700;font-size:13px;cursor:pointer}
+.tab.on{background:#fff;color:var(--g2)}
+main{max-width:720px;margin:auto;padding:12px 12px calc(96px + env(safe-area-inset-bottom))}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:13px;margin-bottom:11px;box-shadow:0 2px 8px #0b5c4c0a}
+.lbl{font-size:12px;font-weight:800;color:var(--mut);text-transform:uppercase;letter-spacing:.04em;margin:0 0 6px}
+.field{width:100%;border:1px solid #cfe0d9;border-radius:11px;padding:10px 11px;background:#fbfdfc;outline:none}
+.field:focus{border-color:var(--g);box-shadow:0 0 0 3px #08745e1f}
+textarea.field{resize:vertical;min-height:70px}
+.row{display:flex;gap:8px}.row>*{flex:1;min-width:0}
+.weekbar{display:flex;align-items:center;gap:8px}
+.weekbar .nav{border:1px solid var(--line);background:#fff;border-radius:11px;width:40px;height:40px;font-size:18px;cursor:pointer;flex:none}
+.weekbar .mid{flex:1;text-align:center}
+.weekbar .mid b{display:block;font-size:14.5px}.weekbar .mid small{color:var(--mut);font-size:12px}
+.pill{display:inline-flex;align-items:center;gap:4px;border-radius:999px;padding:3px 9px;font-size:11.5px;font-weight:800}
+.p-ok{background:#dcfce7;color:#166534}.p-warn{background:#fef3c7;color:#92400e}.p-bad{background:#fee2e2;color:#991b1b}.p-new{background:#e0f2fe;color:#075985}.p-mut{background:#eef2f1;color:#475467}
+.day{border:1px solid var(--line);border-radius:16px;background:#fff;margin-bottom:10px;overflow:hidden}
+.dayhead{display:flex;align-items:center;gap:8px;padding:11px 12px;cursor:pointer;user-select:none}
+.dayhead.today{background:var(--mint)}
+.dayhead .dn{font-weight:800;color:var(--g2)}.dayhead .dd{color:var(--mut);font-size:12.5px}
+.dayhead .cnt{margin-left:auto}
+.chev{transition:.2s;color:var(--mut)}.day.open .chev{transform:rotate(90deg)}
+.daybody{padding:0 10px 10px;display:none}.day.open .daybody{display:block}
+.task{border:1px solid #e5eeea;border-left:4px solid #94a3b8;border-radius:12px;padding:10px;margin-top:8px;background:#fcfefd}
+.task.done{border-left-color:#16a34a;background:#f3fbf6}.task.cont{border-left-color:#d97706;background:#fffaf0}
+.tname{font-weight:700;word-break:break-word}
+.tmeta{font-size:12px;color:var(--mut);margin-top:3px}
+.tbox{font-size:12.5px;border-radius:9px;padding:6px 8px;margin-top:6px;white-space:pre-wrap;word-break:break-word}
+.tb-exp{background:#f1f5f9;color:#334155}.tb-self{background:#ecfdf3;color:#14532d}.tb-fb{background:#fff7ed;color:#7c2d12}
+.tacts{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 11px;font-size:12.5px;font-weight:700;cursor:pointer}
+.chip.on-done{background:#16a34a;border-color:#16a34a;color:#fff}.chip.on-cont{background:#d97706;border-color:#d97706;color:#fff}
+.chip.del{color:var(--red);margin-left:auto}
+.addbtn{width:100%;border:1.5px dashed #9cc9b9;background:#f6fbf9;color:var(--g2);border-radius:12px;padding:9px;font-weight:800;margin-top:9px;cursor:pointer}
+.empty{color:var(--mut);font-size:13px;padding:6px 2px}
+.ck{display:flex;align-items:flex-start;gap:10px;padding:10px 4px;border-bottom:1px solid #eef3f1}
+.ck:last-child{border-bottom:0}
+.ck input[type=checkbox]{width:22px;height:22px;accent-color:var(--g);margin-top:1px;flex:none}
+.ck .ct{flex:1;word-break:break-word;white-space:pre-wrap}.ck.done .ct{text-decoration:line-through;color:var(--mut)}
+.ck button{border:0;background:none;font-size:16px;cursor:pointer;padding:2px 4px}
+.plan-item{display:flex;align-items:center;gap:10px;padding:11px 4px;border-bottom:1px solid #eef3f1;cursor:pointer}
+.plan-item:last-child{border-bottom:0}.plan-item .pi{flex:1;min-width:0}.plan-item b{display:block;font-size:14px}.plan-item small{color:var(--mut)}
+.prog{height:7px;background:#e6efeb;border-radius:9px;overflow:hidden;margin-top:6px}.prog i{display:block;height:100%;background:linear-gradient(90deg,#08745e,#22c55e)}
+.savebar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fffffff2;backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:9px 12px calc(9px + env(safe-area-inset-bottom))}
+.savebar .in{max-width:720px;margin:auto;display:flex;gap:9px;align-items:center}
+.savebar .st{flex:1;font-size:12.5px;color:var(--mut);min-width:0}
+.btn{border:0;border-radius:12px;padding:12px 16px;font-weight:800;cursor:pointer}
+.btn-main{background:var(--g);color:#fff;box-shadow:0 6px 14px #08745e33}.btn-main:disabled{opacity:.55}
+.btn-light{background:#eef7f4;color:var(--g2);border:1px solid #d2e8e1}
+.dirty{color:var(--amb);font-weight:800}
+.sheet-bg{position:fixed;inset:0;background:#0f172a66;z-index:60;display:flex;align-items:flex-end;justify-content:center}
+.sheet{background:#fff;width:100%;max-width:720px;border-radius:20px 20px 0 0;padding:14px 14px calc(14px + env(safe-area-inset-bottom));max-height:92vh;overflow:auto;animation:up .2s ease}
+@keyframes up{from{transform:translateY(40px);opacity:.4}}
+.sheet h3{margin:2px 0 12px;font-size:17px;color:var(--g2)}
+.sheet .grp{margin-bottom:11px}
+.sheet .acts{display:flex;gap:9px;margin-top:6px}.sheet .acts .btn{flex:1}
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));transform:translateX(-50%);background:#14213d;color:#fff;border-radius:12px;padding:10px 14px;font-size:13.5px;z-index:90;max-width:92vw;box-shadow:0 10px 30px #0004}
+.loading{text-align:center;color:var(--mut);padding:30px 10px}
+.spin{width:26px;height:26px;border:3px solid #cfe7de;border-top-color:var(--g);border-radius:50%;animation:sp .8s linear infinite;margin:0 auto 10px}
+@keyframes sp{to{transform:rotate(360deg)}}
+.eval{background:linear-gradient(135deg,#fffbeb,#fff);border-color:#fde68a}
+.eval .ev{white-space:pre-wrap;font-size:13.5px;margin-top:6px}
+.note{font-size:12px;color:var(--mut);margin-top:6px}
+.warnbox{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;border-radius:12px;padding:9px 11px;font-size:13px;margin-bottom:10px}
+</style>
+</head>
+<body>
+<header>
+  <div class="hrow">
+    <div class="logo">ID</div>
+    <div class="htxt"><b>Kế hoạch & Checklist</b><span>Đồng bộ với Kế hoạch & Báo cáo IDECO</span></div>
+    <button class="iconbtn" id="btnReload" title="Tải lại dữ liệu">⟳</button>
+  </div>
+  <div class="who" id="whoBar"><span>👤</span><b id="whoText">Chọn nhân viên & bộ phận</b><span style="margin-left:auto;opacity:.8">Đổi ›</span></div>
+  <div class="tabs">
+    <button class="tab on" data-tab="plan">🗓️ Tuần</button>
+    <button class="tab" data-tab="check">✅ Checklist</button>
+    <button class="tab" data-tab="list">📋 Đã lập</button>
+  </div>
+</header>
+
+<main id="main"><div class="loading"><div class="spin"></div>Đang tải dữ liệu…</div></main>
+
+<div class="savebar">
+  <div class="in">
+    <div class="st" id="saveState">Chưa có thay đổi.</div>
+    <button class="btn btn-main" id="btnSave" disabled>💾 Lưu</button>
+  </div>
+</div>
+
+<div id="sheetHost"></div>
+
 <script>
-(()=>{'use strict';
-const CONFIG={apiKey:'AIzaSyCNsKk3vZSbfOcbZv1dCHISTXep2njHOiM',authDomain:'kehoachnew-532cf.firebaseapp.com',databaseURL:'https://kehoachnew-532cf-default-rtdb.firebaseio.com',projectId:'kehoachnew-532cf',storageBucket:'kehoachnew-532cf.firebasestorage.app',messagingSenderId:'124344092261',appId:'1:124344092261:web:90c6ba3edcdd45a2f6a88c'};
-const db=firebase.initializeApp(CONFIG,'idecoMobilePlan').database();const $=id=>document.getElementById(id);let all={},plan=null,editing=null,busy=false;let toastTimer;
-function toast(msg,err=false){$('toast').textContent=msg;$('toast').style.background=err?'#a23235':'#194c4b';$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),3800)}
-const today=()=>new Date().toLocaleDateString('en-CA');const uid=()=> 'mobile_'+Date.now().toString(36)+'_'+Math.random().toString(36).slice(2,9);
-const dn=['Chủ Nhật','Thứ Hai','Thứ Ba','Thứ Tư','Thứ Năm','Thứ Sáu','Thứ Bảy'];function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};function monday(s){const d=new Date((s||today())+'T12:00:00');d.setDate(d.getDate()-(d.getDay()+6)%7);return iso(d)}function weekDays(s){const d=new Date(monday(s)+'T12:00:00');return Array.from({length:7},(_,i)=>{let n=new Date(d);n.setDate(d.getDate()+i);return {name:dn[n.getDay()],date:iso(n)}})};
-function txt(v){return String(v==null?'':v)}function node(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e}
-function updateHeader(){if(!plan){$('planStatus').textContent='Chưa chọn bản kế hoạch';return}$('planStatus').textContent='Đang chọn: '+plan.employeeName+' · '+plan.creationDate;$('planInfo').textContent=plan.employeeName+' · '+plan.creationDate}
-function changeTab(t){if(t!=='home'&&!plan){toast('Vui lòng chọn hoặc tạo kế hoạch trước.',true);return}['home','plan','check','report'].forEach(x=>$('v-'+x).classList.toggle('hide',x!==t));document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.dataset.tab===t));if(t==='plan')drawTasks();if(t==='check')drawChecks();if(t==='report')drawReports();}
-document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>changeTab(b.dataset.tab));
-function populate(){const ep=$('employee').value.trim().toLocaleLowerCase('vi');const plans=Object.values(all).filter(x=>x&&(!ep||txt(x.employeeName).toLocaleLowerCase('vi')===ep)).sort((a,b)=>txt(b.creationDate).localeCompare(txt(a.creationDate)));$('plansList').replaceChildren();if(!plans.length){$('plansList').append(node('div','empty','Không có kế hoạch phù hợp.'));return}plans.slice(0,55).forEach(p=>{const row=node('div','archive');const h=node('div','task-title',txt(p.employeeName)||'Chưa đặt tên');const date=node('div','muted',(p.creationDate||'')+' • '+(p.department||'')+' • '+Object.values(p.days||{}).reduce((n,d)=>n+(d.tasks||[]).length,0)+' công việc');const b=node('button','btn small','Mở kế hoạch →');b.style.marginTop='7px';b.onclick=()=>openPlan(p.id);row.append(h,date,b);$('plansList').append(row)})}
-function normalize(p){const x=structuredClone(p);x.days=x.days||{};weekDays(x.creationDate).forEach(d=>{if(!x.days[d.name])x.days[d.name]={date:d.date,tasks:[]};else{x.days[d.name].date ||=d.date;x.days[d.name].tasks ||= []}});x.monthlyChecklist=Array.isArray(x.monthlyChecklist)?x.monthlyChecklist:[];x.savedReports=Array.isArray(x.savedReports)?x.savedReports:[];return x}
-function openPlan(id){const orig=all[id];if(!orig)return toast('Không tìm thấy kế hoạch.',true);plan=normalize({...orig,id});$('employee').value=plan.employeeName||'';$('department').value=plan.department||'';$('weekDate').value=plan.creationDate||today();$('objective').value=plan.objective||'';$('reportContent').value=plan.report||'';updateHeader();changeTab('plan')}
-$('weekDate').value=today();$('employee').onchange=populate;$('newPlan').onclick=()=>{const name=$('employee').value.trim(),dep=$('department').value;if(!name||!dep)return toast('Nhập tên nhân viên và bộ phận trước.',true);const date=monday($('weekDate').value),existing=Object.values(all).find(p=>txt(p.employeeName).trim().toLowerCase()===name.toLowerCase()&&p.department===dep&&monday(p.creationDate)===date);if(existing){if(confirm('Tuần này đã có kế hoạch. Mở bản đã lập để tránh trùng?'))openPlan(existing.id);return}plan=normalize({id:uid(),employeeName:name,department:dep,creationDate:date,objective:$('objective').value.trim(),days:{},report:'',monthlyChecklist:[],savedReports:[],resultEvidenceFiles:[],directorRating:'',directorEvaluation:''});updateHeader();changeTab('plan');toast('Đã tạo bản nháp. Bấm Lưu kế hoạch để đồng bộ Firebase.')};$('loadLatest').onclick=()=>{const name=$('employee').value.trim().toLowerCase();const a=Object.values(all).filter(p=>txt(p.employeeName).trim().toLowerCase()===name).sort((a,b)=>txt(b.creationDate).localeCompare(txt(a.creationDate)));if(a.length)openPlan(a[0].id);else toast('Không tìm thấy kế hoạch của nhân viên này.',true)};
-function drawTasks(){$('taskList').replaceChildren();if(!plan)return;weekDays(plan.creationDate).forEach(day=>{let hd=node('div','dayheading',day.name+' · '+day.date);$('taskList').append(hd);const tasks=plan.days[day.name]?.tasks||[];if(!tasks.length)$('taskList').append(node('div','muted','Chưa có công việc'));tasks.forEach(t=>{const row=node('div','task');const a=node('div','row');let ch=node('input','check');ch.type='checkbox';ch.checked=!!t.isCompleted;ch.onchange=()=>{t.isCompleted=ch.checked;if(ch.checked)t.isContinued=false;drawTasks()};const w=node('div');w.style.flex='1';w.append(node('div','task-title',t.name||'(Chưa đặt tên)'));w.append(node('div','muted',t.expectedResult||''));const b=node('button','btn small light','Sửa');b.onclick=()=>editTask(day.name,t.id);a.append(ch,w,b);row.append(a);$('taskList').append(row)})})}
-$('newTask').onclick=()=>{if(!plan)return;const date=today();let day=weekDays(plan.creationDate).find(d=>d.date===date)||weekDays(plan.creationDate)[0];const task={id:uid(),name:'',startDate:day.date,endDate:day.date,expectedResult:'',isCompleted:false,hasReminder:false};plan.days[day.name].tasks.push(task);editTask(day.name,task.id)};
-function editTask(day,id){const t=plan.days[day].tasks.find(t=>t.id===id);if(!t)return;editing={day,id};$('editName').value=t.name||'';$('editStart').value=t.startDate||plan.days[day].date;$('editEnd').value=t.endDate||plan.days[day].date;$('editExpected').value=t.expectedResult||'';$('editActual').value=t.adjustedExpectedResult||'';$('modal').classList.remove('hide')}
-$('cancelTask').onclick=()=>$('modal').classList.add('hide');$('applyTask').onclick=()=>{if(!editing)return;let t=plan.days[editing.day].tasks.find(t=>t.id===editing.id);if(!t)return;const name=$('editName').value.trim();if(!name)return toast('Nhập tên công việc.',true);Object.assign(t,{name,startDate:$('editStart').value,endDate:$('editEnd').value,expectedResult:$('editExpected').value.trim(),adjustedExpectedResult:$('editActual').value.trim()});$('modal').classList.add('hide');drawTasks();toast('Đã cập nhật bản nháp, bấm Lưu để đồng bộ.')};$('deleteTask').onclick=()=>{if(!confirm('Xóa công việc này khỏi bản kế hoạch?'))return;plan.days[editing.day].tasks=plan.days[editing.day].tasks.filter(t=>t.id!==editing.id);$('modal').classList.add('hide');drawTasks()};
-function drawChecks(){$('checks').replaceChildren();if(!plan)return;const list=plan.monthlyChecklist||[];if(!list.length)$('checks').append(node('div','empty','Chưa có checklist tháng.'));list.forEach(t=>{const row=node('div','task row');const cb=node('input','check');cb.type='checkbox';cb.checked=!!t.isCompleted;cb.onchange=()=>t.isCompleted=cb.checked;const inp=node('input');inp.value=t.content||'';inp.placeholder='Nội dung checklist';inp.style.flex='1';inp.oninput=()=>t.content=inp.value;const rm=node('button','btn small danger','×');rm.onclick=()=>{plan.monthlyChecklist=plan.monthlyChecklist.filter(x=>x.id!==t.id);drawChecks()};row.append(cb,inp,rm);$('checks').append(row)})} $('addCheck').onclick=()=>{plan.monthlyChecklist.push({id:uid(),content:'',isCompleted:false});drawChecks();$('checks').querySelector('input:not([type=checkbox]):last-of-type')?.focus()};
-// Transaction updates only edited plan fields, preserving analysis, attachments and admin fields on server.
-function transactionPlan(patch){if(!plan)return Promise.reject(Error('Chưa chọn kế hoạch'));const id=plan.id;return new Promise((resolve,reject)=>{db.ref('weekly_plans/'+id).transaction(current=>{const base=current||{id};if(current&&current.employeeName&&current.employeeName!==plan.employeeName)return;return {...base,...patch,id};},(err,committed,snap)=>{if(err)return reject(err);if(!committed)return reject(Error('Dữ liệu thay đổi hoặc khác tên nhân viên; vui lòng tải lại kế hoạch.'));plan=normalize(snap.val());resolve(snap.val())},false)})}
-async function save(kind){if(busy)return;if(!plan)return toast('Chưa chọn kế hoạch.',true);busy=true;$('sync').textContent='Đang lưu…';try{const patch=kind==='check'?{monthlyChecklist:plan.monthlyChecklist}:kind==='plan'?{employeeName:plan.employeeName,department:plan.department,creationDate:plan.creationDate,objective:plan.objective,days:plan.days}:{report:plan.report};await transactionPlan(patch);$('sync').textContent='✓ Đã lưu';toast('✓ Firebase xác nhận lưu thành công');}catch(e){$('sync').textContent='⚠ Lỗi lưu';toast('Không lưu được: '+(e.message||e),true)}finally{busy=false}}
-$('savePlan').onclick=()=>{plan.objective=$('objective').value.trim();save('plan')};$('saveCheck').onclick=()=>save('check');
-function drawReports(){$('reports').replaceChildren();if(!plan)return;const r=plan.savedReports||[];if(!r.length)$('reports').append(node('div','empty','Chưa có báo cáo.'));r.slice().reverse().forEach(x=>{const box=node('div','report');box.append(node('div','task-title',x.weekName||'Báo cáo tuần'));box.append(node('div','muted',x.createdAt||''));box.append(node('p','',x.actualResults||''));$('reports').append(box)})}
-$('saveReport').onclick=async()=>{if(!plan||busy)return;const name=$('reportName').value.trim(),actual=$('actual').value.trim();if(!name||!actual)return toast('Nhập tên báo cáo và kết quả thực tế.',true);busy=true;$('sync').textContent='Đang lưu…';try{const current=structuredClone(plan),tasks=Object.entries(current.days||{}).flatMap(([dayName,d])=>(d.tasks||[]).map(t=>({...t,dayName,planDate:d.date||''})));const report={id:uid(),weekName:name,reportMonth:current.creationDate.slice(0,7),periodStart:monday(current.creationDate),employeeName:current.employeeName,department:current.department,actualResults:actual,schemaVersion:3,planObjectiveSnapshot:current.objective||'',plannedTasksSnapshot:tasks,monthlyChecklistSnapshot:current.monthlyChecklist||[],resultEvidenceFilesSnapshot:current.resultEvidenceFiles||[],reportContent:$('reportContent').value.trim(),completedTasksSnapshot:tasks.filter(t=>t.isCompleted),continuedTasksSnapshot:tasks.filter(t=>t.isContinued),directorEvaluation:'',directorRating:'',directorReviewedAt:'',createdAt:new Date().toISOString()};const id=current.id;await new Promise((resolve,reject)=>db.ref('weekly_plans/'+id).transaction(x=>{if(!x)return;const existing=Array.isArray(x.savedReports)?x.savedReports:[];return {...x,savedReports:[...existing,report],report:report.reportContent}},(err,committed,snap)=>{if(err||!committed)reject(err||Error('Không tìm thấy kế hoạch để lưu báo cáo'));else{plan=normalize(snap.val());resolve()}},false));$('actual').value='';$('reportName').value='';$('sync').textContent='✓ Đã lưu';drawReports();toast('✓ Báo cáo đã đồng bộ lên Firebase');}catch(e){$('sync').textContent='⚠ Lỗi lưu';toast('Lưu báo cáo thất bại: '+e.message,true)}finally{busy=false}};
-// Small realtime listener: full root snapshot consistent with original app, no local array overwrites.
-db.ref('.info/connected').on('value',s=>{if(!busy)$('sync').textContent=s.val()?'● Trực tuyến':'○ Mất kết nối'});db.ref('weekly_plans').on('value',s=>{all=s.val()||{};populate()},e=>toast('Không đọc được Firebase: '+e.message,true));
-db.ref('settings/officialEmployeesGlobalV3').once('value').then(s=>{const vals=s.val();const names=new Set();function scan(v,depth=0){if(depth>4||!v)return;if(typeof v==='object'){if(typeof v.name==='string')names.add(v.name);if(typeof v.employeeName==='string')names.add(v.employeeName);Object.values(v).forEach(x=>scan(x,depth+1))}}scan(vals);[...names].sort().forEach(n=>{const op=node('option');op.value=n;$('employeeList').append(op)})}).catch(()=>{});
-})();
-</script></body></html>
+'use strict';
+/* =========================================================
+   IDECO · KẾ HOẠCH & CHECKLIST MOBILE
+   Dùng CHUNG node Firebase "weekly_plans" với ứng dụng gốc
+   Kế hoạch & Báo cáo (apps/KE_HOACH.html trong AI-Agent).
+   Cấu trúc bản ghi giữ nguyên 100% như file gốc:
+   { id, employeeName, department, creationDate, objective,
+     days:{ "Thứ 2":{date,tasks:[{id,name,startDate,endDate,
+       expectedResult,isCompleted,isContinued,hasReminder,
+       adjustedExpectedResult,feedback}]} ... "Thứ 7" },
+     monthlyChecklist:[{id,content,isCompleted}], report,
+     savedReports, resultEvidenceFiles, directorRating,
+     directorEvaluation, evaluationStatus, evaluationUpdatedAt }
+   ========================================================= */
+const DB='https://kehoachnew-532cf-default-rtdb.firebaseio.com';
+const DAY_NAMES=['Thứ 2','Thứ 3','Thứ 4','Thứ 5','Thứ 6','Thứ 7'];
+const DEPTS=['Bộ phận kế toán','Bộ Phân Kho Vận','Bộ Phận Kinh Doanh','Bộ phận SOP'];
+const LS_WHO='ideco_khcl_mobile_who_v2';
+
+/* ---------- tiện ích ---------- */
+const $=s=>document.querySelector(s);
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pad=n=>String(n).padStart(2,'0');
+const ymd=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+const parseYmd=s=>{const m=/^(\d{4})-(\d{2})-(\d{2})/.exec(String(s||''));return m?new Date(+m[1],+m[2]-1,+m[3]):null;};
+const dmy=s=>{const d=parseYmd(s);return d?pad(d.getDate())+'/'+pad(d.getMonth()+1):'';};
+const dmyy=s=>{const d=parseYmd(s);return d?pad(d.getDate())+'/'+pad(d.getMonth()+1)+'/'+d.getFullYear():'';};
+const addDays=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x;};
+const mondayOf=s=>{const d=parseYmd(s)||new Date();const wd=(d.getDay()+6)%7;return addDays(new Date(d.getFullYear(),d.getMonth(),d.getDate()),-wd);};
+const getWeekDays=s=>{const m=mondayOf(s);return DAY_NAMES.map((name,i)=>({name,date:ymd(addDays(m,i))}));};
+const genId=()=>(crypto.randomUUID?crypto.randomUUID():Date.now().toString(36)+Math.random().toString(36).slice(2));
+const stripVN=s=>String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D').toLowerCase();
+const normName=v=>String(v||'').replace(/[\*_`#>\[\](){}]/g,' ').replace(/\s+/g,' ').trim().toLocaleLowerCase('vi');
+const deptKey=v=>{const n=stripVN(v).replace(/\s+/g,' ').trim();
+  if(n.includes('kinh doanh'))return'business';if(n.includes('ke toan'))return'accounting';
+  if(n.includes('kho van')||n.includes('kho - van')||n.includes('kho-van'))return'logistics';
+  if(n==='sop'||n.includes('bo phan sop')||n.includes('quy trinh sop')||n.includes('kho sop')||n.includes('kho-sop'))return'sop';return'';};
+const arr=v=>Array.isArray(v)?v.filter(Boolean):(v&&typeof v==='object'?Object.values(v).filter(Boolean):[]);
+const clone=o=>JSON.parse(JSON.stringify(o));
+function toast(msg,ms=2600){const t=document.createElement('div');t.className='toast';t.textContent=msg;document.body.append(t);setTimeout(()=>t.remove(),ms);}
+
+async function fb(path,opt={}){
+  const ctl=new AbortController();const tm=setTimeout(()=>ctl.abort(),20000);
+  try{
+    const res=await fetch(DB+'/'+path+'.json'+(opt.query||''),{method:opt.method||'GET',cache:'no-store',signal:ctl.signal,
+      headers:opt.body!==undefined?{'Content-Type':'application/json'}:undefined,body:opt.body!==undefined?JSON.stringify(opt.body):undefined});
+    if(!res.ok)throw new Error('Firebase HTTP '+res.status);
+    return await res.json();
+  }catch(e){if(e.name==='AbortError')throw new Error('Hết thời gian chờ Firebase. Kiểm tra mạng.');throw e;}
+  finally{clearTimeout(tm);}
+}
+
+/* ---------- trạng thái ---------- */
+const S={employees:[],who:{name:'',dept:''},allPlans:{},myPlans:[],weekDate:ymd(new Date()),
+  plan:null,base:null,isNew:false,dirty:false,tab:'plan',openDays:new Set(),saving:false,loaded:false};
+try{const w=JSON.parse(localStorage.getItem(LS_WHO)||'null');if(w&&w.name)S.who=w;}catch{}
+
+function normalizePlan(p,id){
+  const x=clone(p||{});x.id=x.id||id;
+  x.days=x.days&&typeof x.days==='object'?x.days:{};
+  x.monthlyChecklist=arr(x.monthlyChecklist);
+  if(!Array.isArray(x.savedReports))x.savedReports=arr(x.savedReports);
+  if(!Array.isArray(x.resultEvidenceFiles))x.resultEvidenceFiles=arr(x.resultEvidenceFiles);
+  for(const d of getWeekDays(x.creationDate||ymd(new Date()))){
+    const cur=x.days[d.name];
+    if(!cur)x.days[d.name]={date:d.date,tasks:[]};
+    else{if(!cur.date)cur.date=d.date;cur.tasks=arr(cur.tasks);}
+  }
+  return x;
+}
+function newPlan(dateStr){
+  const p={id:genId(),employeeName:S.who.name,department:S.who.dept,creationDate:dateStr,objective:'',days:{},report:'',
+    monthlyChecklist:[],savedReports:[],resultEvidenceFiles:[],directorRating:'',directorEvaluation:''};
+  for(const d of getWeekDays(dateStr))p.days[d.name]={date:d.date,tasks:[]};
+  // Giống file gốc: tự lấy checklist tháng từ kế hoạch gần nhất cùng người + bộ phận
+  const last=S.myPlans.find(q=>arr(q.monthlyChecklist).length);
+  if(last)p.monthlyChecklist=clone(arr(last.monthlyChecklist));
+  return p;
+}
+
+/* ---------- tải dữ liệu ---------- */
+async function loadEmployees(){
+  const data=await fb('settings/officialEmployeesGlobalV3');
+  const m=new Map();
+  Object.values(data||{}).forEach(it=>{const n=String(it&&it.employeeName||'').replace(/\s+/g,' ').trim();if(n)m.set(normName(n),n);});
+  S.employees=[...m.values()].sort((a,b)=>a.localeCompare(b,'vi'));
+}
+async function loadPlans(){
+  let data=null;
+  // Ưu tiên truy vấn theo tên (nhẹ cho mobile); nếu Firebase chưa có index thì tải toàn bộ như file gốc.
+  if(S.who.name){
+    try{data=await fb('weekly_plans',{query:'?orderBy='+encodeURIComponent('"employeeName"')+'&equalTo='+encodeURIComponent(JSON.stringify(S.who.name))});}
+    catch(e){data=null;}
+  }
+  if(data===null)data=await fb('weekly_plans');
+  S.allPlans=data||{};
+  const nk=normName(S.who.name),dk=deptKey(S.who.dept);
+  S.myPlans=Object.entries(S.allPlans).filter(([id,p])=>p&&normName(p.employeeName)===nk&&deptKey(p.department)===dk)
+    .map(([id,p])=>({...p,id:p.id||id}))
+    .sort((a,b)=>String(b.creationDate||'').localeCompare(String(a.creationDate||''))||String(b.evaluationUpdatedAt||'').localeCompare(String(a.evaluationUpdatedAt||'')));
+}
+function pickWeekPlan(){
+  const mon=ymd(mondayOf(S.weekDate));
+  const found=S.myPlans.find(p=>p.creationDate&&ymd(mondayOf(p.creationDate))===mon);
+  if(found){S.plan=normalizePlan(found,found.id);S.isNew=false;}
+  else{S.plan=newPlan(S.weekDate);S.isNew=true;}
+  S.base=JSON.stringify(S.plan);S.dirty=false;
+  const today=ymd(new Date());const td=Object.entries(S.plan.days).find(([n,d])=>d.date===today);
+  S.openDays=new Set(td?[td[0]]:DAY_NAMES.filter(n=>arr(S.plan.days[n]?.tasks).length));
+  if(!S.openDays.size)S.openDays.add('Thứ 2');
+}
+async function boot(force){
+  const m=$('#main');
+  if(!S.loaded||force)m.innerHTML='<div class="loading"><div class="spin"></div>Đang tải dữ liệu từ Firebase…</div>';
+  try{
+    if(!S.employees.length)await loadEmployees();
+    if(!S.who.name||!S.who.dept){S.loaded=true;renderWho();openWhoSheet(true);render();return;}
+    await loadPlans();pickWeekPlan();S.loaded=true;renderWho();render();
+  }catch(e){
+    m.innerHTML='<div class="card"><b>Không tải được dữ liệu.</b><div class="note">'+esc(e.message)+'</div><button class="btn btn-main" style="margin-top:10px;width:100%" onclick="boot(true)">Thử lại</button></div>';
+  }
+}
+
+/* ---------- render ---------- */
+function renderWho(){$('#whoText').textContent=S.who.name?S.who.name+' · '+S.who.dept:'Chọn nhân viên & bộ phận';}
+function markDirty(){S.dirty=JSON.stringify(S.plan)!==S.base;updateSaveBar();}
+function updateSaveBar(){
+  const b=$('#btnSave'),st=$('#saveState');
+  b.disabled=!S.plan||S.saving||(!S.dirty&&!S.isNew)||(S.isNew&&!S.dirty);
+  b.textContent=S.saving?'⏳ Đang lưu…':'💾 Lưu';
+  if(!S.plan){st.textContent='';return;}
+  if(S.saving)st.innerHTML='Đang ghi và chờ Firebase xác nhận…';
+  else if(S.dirty)st.innerHTML='<span class="dirty">● Có thay đổi chưa lưu</span>';
+  else if(S.isNew)st.textContent='Tuần này chưa có kế hoạch. Nhập mục tiêu/công việc rồi Lưu.';
+  else st.textContent='Đã đồng bộ Firebase.';
+}
+function statusPill(p){
+  const s=p.evaluationStatus||'';
+  if(s==='Đã đạt')return'<span class="pill p-ok">✔ Đã đạt</span>';
+  if(s==='Làm lại')return'<span class="pill p-bad">↺ Làm lại</span>';
+  if(s)return'<span class="pill p-warn">'+esc(s)+'</span>';
+  return'<span class="pill p-mut">Chờ đánh giá</span>';
+}
+function stats(p){let t=0,d=0;for(const n of DAY_NAMES){const ts=arr(p.days&&p.days[n]&&p.days[n].tasks);t+=ts.length;d+=ts.filter(x=>x.isCompleted).length;}return{t,d};}
+
+function render(){
+  document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('on',b.dataset.tab===S.tab));
+  const m=$('#main');
+  if(!S.who.name||!S.who.dept){m.innerHTML='<div class="card"><b>Chọn nhân viên và bộ phận</b><div class="note">Tên lấy từ Danh mục nhân viên chính thức trên Firebase (giống ứng dụng gốc).</div><button class="btn btn-main" style="width:100%;margin-top:10px" onclick="openWhoSheet()">Chọn ngay</button></div>';updateSaveBar();return;}
+  if(S.tab==='plan')m.innerHTML=renderPlan();
+  else if(S.tab==='check')m.innerHTML=renderChecklist();
+  else m.innerHTML=renderList();
+  updateSaveBar();
+}
+function weekBar(){
+  const days=getWeekDays(S.weekDate);
+  return '<div class="card"><div class="weekbar"><button class="nav" data-act="prevWeek">‹</button><div class="mid"><b>Tuần '+dmy(days[0].date)+' – '+dmyy(days[5].date)+'</b><small>'+(S.isNew?'<span class="pill p-new">Chưa lập</span>':statusPill(S.plan))+'</small></div><button class="nav" data-act="nextWeek">›</button></div>'
+   +'<div class="row" style="margin-top:9px"><input type="date" class="field" id="pickDate" value="'+esc(S.weekDate)+'"><button class="btn btn-light" data-act="thisWeek" style="flex:none">Tuần này</button></div></div>';
+}
+function renderPlan(){
+  const p=S.plan,st=stats(p),pct=st.t?Math.round(st.d*100/st.t):0;
+  let h='';
+  if(p.evaluationStatus==='Làm lại')h+='<div class="warnbox">⚠️ Kế hoạch này được BGĐ yêu cầu <b>Làm lại</b>. Khi bạn lưu, trạng thái sẽ chuyển sang “Cần bổ sung hoàn chỉnh” như ứng dụng gốc.</div>';
+  h+=weekBar();
+  h+='<div class="card"><p class="lbl">🎯 Mục tiêu kế hoạch</p><textarea class="field" id="objective" rows="3" placeholder="Nhập mục tiêu kế hoạch tuần...">'+esc(p.objective)+'</textarea>'
+    +'<div class="note">Ngày lập: '+dmyy(p.creationDate)+' · '+st.d+'/'+st.t+' việc hoàn thành 100%</div><div class="prog"><i style="width:'+pct+'%"></i></div></div>';
+  h+='<p class="lbl" style="margin:14px 4px 8px">Kế hoạch chi tiết các ngày</p>';
+  const today=ymd(new Date());
+  for(const n of DAY_NAMES){
+    const d=p.days[n]||{date:'',tasks:[]},ts=arr(d.tasks),done=ts.filter(t=>t.isCompleted).length;
+    const open=S.openDays.has(n);
+    h+='<section class="day'+(open?' open':'')+'"><div class="dayhead'+(d.date===today?' today':'')+'" data-act="toggleDay" data-day="'+esc(n)+'"><span class="chev">▸</span><span class="dn">'+esc(n)+'</span><span class="dd">'+dmyy(d.date)+(d.date===today?' · Hôm nay':'')+'</span><span class="cnt">'+(ts.length?'<span class="pill '+(done===ts.length?'p-ok':'p-mut')+'">'+done+'/'+ts.length+'</span>':'<span class="pill p-mut">Trống</span>')+'</span></div><div class="daybody">';
+    if(!ts.length)h+='<div class="empty">Chưa có công việc.</div>';
+    for(const t of ts){
+      const cls=t.isCompleted?' done':(t.isContinued?' cont':'');
+      h+='<div class="task'+cls+'"><div class="tname">'+esc(t.name||'(Chưa đặt tên)')+'</div>'
+        +'<div class="tmeta">📅 '+dmy(t.startDate)+' → 🏁 '+dmy(t.endDate)+(t.hasReminder?' · 🔔':'')+'</div>'
+        +(t.expectedResult?'<div class="tbox tb-exp">🎯 '+esc(t.expectedResult)+'</div>':'')
+        +(t.adjustedExpectedResult?'<div class="tbox tb-self">✍️ '+esc(t.adjustedExpectedResult)+'</div>':'')
+        +(t.feedback?'<div class="tbox tb-fb">💬 Góp ý: '+esc(t.feedback)+'</div>':'')
+        +'<div class="tacts"><button class="chip'+(t.isCompleted?' on-done':'')+'" data-act="toggleDone" data-day="'+esc(n)+'" data-id="'+esc(t.id)+'">✔ Xong 100%</button>'
+        +'<button class="chip'+(t.isContinued?' on-cont':'')+'" data-act="toggleCont" data-day="'+esc(n)+'" data-id="'+esc(t.id)+'">↻ Tiếp tục</button>'
+        +'<button class="chip" data-act="editTask" data-day="'+esc(n)+'" data-id="'+esc(t.id)+'">✎ Sửa</button>'
+        +'<button class="chip del" data-act="delTask" data-day="'+esc(n)+'" data-id="'+esc(t.id)+'">🗑</button></div></div>';
+    }
+    h+='<button class="addbtn" data-act="addTask" data-day="'+esc(n)+'">+ Thêm công việc '+esc(n)+'</button></div></section>';
+  }
+  if(p.directorRating||p.directorEvaluation){
+    h+='<div class="card eval"><p class="lbl">👑 Đánh giá của Cấp quản lý / BGĐ</p>'+(p.directorRating?'<span class="pill p-warn">'+esc(p.directorRating)+'</span>':'')+(p.directorEvaluation?'<div class="ev">'+esc(p.directorEvaluation)+'</div>':'')+'</div>';
+  }
+  return h;
+}
+function renderChecklist(){
+  const p=S.plan,items=arr(p.monthlyChecklist),done=items.filter(i=>i.isCompleted).length;
+  let h=weekBar()+'<div class="card"><p class="lbl">✅ Checklist tháng · '+done+'/'+items.length+'</p>';
+  if(!items.length)h+='<div class="empty">Chưa có checklist nào được lập.</div>';
+  for(const it of items){
+    h+='<div class="ck'+(it.isCompleted?' done':'')+'"><input type="checkbox" data-act="ckToggle" data-id="'+esc(it.id)+'"'+(it.isCompleted?' checked':'')+'><div class="ct">'+esc(it.content||'(Trống)')+'</div><button data-act="ckEdit" data-id="'+esc(it.id)+'">✎</button><button data-act="ckDel" data-id="'+esc(it.id)+'">🗑</button></div>';
+  }
+  h+='<button class="addbtn" data-act="ckAdd">+ Thêm mục checklist</button><div class="note">Checklist lưu chung trong bản kế hoạch tuần đang chọn, giống ứng dụng gốc.</div></div>';
+  return h;
+}
+function renderList(){
+  let h='<div class="card"><p class="lbl">📋 Kế hoạch đã lập · '+esc(S.who.name)+'</p>';
+  if(!S.myPlans.length)h+='<div class="empty">Chưa có kế hoạch nào cho nhân viên & bộ phận này.</div>';
+  for(const p of S.myPlans){
+    const np=normalizePlan(p,p.id),st=stats(np),days=getWeekDays(p.creationDate||ymd(new Date()));
+    const cur=S.plan&&S.plan.id===p.id;
+    h+='<div class="plan-item" data-act="openPlan" data-id="'+esc(p.id)+'"><div class="pi"><b>'+(cur?'▶ ':'')+'Tuần '+dmy(days[0].date)+' – '+dmyy(days[5].date)+'</b><small>'+esc((p.objective||'Chưa nhập mục tiêu').slice(0,90))+'</small><div class="prog"><i style="width:'+(st.t?Math.round(st.d*100/st.t):0)+'%"></i></div></div><div style="text-align:right">'+statusPill(p)+'<div class="note">'+st.d+'/'+st.t+' việc</div></div></div>';
+  }
+  return h+'</div>';
+}
+
+/* ---------- bottom sheet ---------- */
+function closeSheet(){$('#sheetHost').innerHTML='';}
+function sheet(html){$('#sheetHost').innerHTML='<div class="sheet-bg" id="sbg"><div class="sheet">'+html+'</div></div>';
+  $('#sbg').addEventListener('click',e=>{if(e.target.id==='sbg')closeSheet();});}
+function openWhoSheet(required){
+  const opts=S.employees.map(n=>'<option'+(normName(n)===normName(S.who.name)?' selected':'')+'>'+esc(n)+'</option>').join('');
+  const dopts=DEPTS.map(d=>'<option'+(deptKey(d)===deptKey(S.who.dept)?' selected':'')+'>'+esc(d)+'</option>').join('');
+  sheet('<h3>👤 Người lập kế hoạch</h3><div class="grp"><p class="lbl">Tên nhân viên</p><select class="field" id="selName"><option value="">-- Chọn tên --</option>'+opts+'</select></div>'
+   +'<div class="grp"><p class="lbl">Bộ phận</p><select class="field" id="selDept"><option value="">-- Chọn bộ phận --</option>'+dopts+'</select><div class="note">Tên nhân viên và Bộ phận là hai lựa chọn độc lập (theo quy tắc file gốc).</div></div>'
+   +'<div class="acts">'+(required?'':'<button class="btn btn-light" onclick="closeSheet()">Hủy</button>')+'<button class="btn btn-main" id="okWho">Xác nhận</button></div>');
+  $('#okWho').onclick=async()=>{
+    const name=$('#selName').value.trim(),dept=$('#selDept').value.trim();
+    if(!name||!dept){toast('Vui lòng chọn đủ Tên nhân viên và Bộ phận.');return;}
+    if(S.dirty&&!confirm('Kế hoạch đang có thay đổi chưa lưu. Bỏ thay đổi và đổi người?'))return;
+    S.who={name,dept};try{localStorage.setItem(LS_WHO,JSON.stringify(S.who));}catch{}
+    closeSheet();renderWho();await boot(true);
+  };
+}
+function findTask(day,id){return arr(S.plan.days[day]&&S.plan.days[day].tasks).find(t=>t.id===id);}
+function openTaskSheet(day,id){
+  const isNewTask=!id;const date=S.plan.days[day].date;
+  const t=isNewTask?{id:genId(),name:'',startDate:date,endDate:date,expectedResult:'',isCompleted:false,hasReminder:false}:clone(findTask(day,id));
+  sheet('<h3>'+(isNewTask?'+ Thêm công việc':'✎ Sửa công việc')+' · '+esc(day)+'</h3>'
+   +'<div class="grp"><p class="lbl">Tên công việc</p><textarea class="field" id="tName" rows="2" placeholder="Nhập tên công việc">'+esc(t.name)+'</textarea></div>'
+   +'<div class="grp row"><div><p class="lbl">📅 Từ</p><input type="date" class="field" id="tStart" value="'+esc(t.startDate||'')+'"></div><div><p class="lbl">🏁 Đến</p><input type="date" class="field" id="tEnd" value="'+esc(t.endDate||'')+'"></div></div>'
+   +'<div class="grp"><p class="lbl">🎯 Kết quả mong đợi</p><textarea class="field" id="tExp" rows="2" placeholder="Nhập kết quả mong đợi (không bắt buộc)">'+esc(t.expectedResult||'')+'</textarea></div>'
+   +'<div class="grp"><p class="lbl">✍️ Tự báo cáo KQ</p><textarea class="field" id="tSelf" rows="2" placeholder="Tự báo cáo chi tiết kết quả công việc đã thực hiện...">'+esc(t.adjustedExpectedResult||'')+'</textarea></div>'
+   +'<div class="grp"><label style="display:flex;gap:8px;align-items:center;font-weight:700"><input type="checkbox" id="tRem" '+(t.hasReminder?'checked':'')+' style="width:20px;height:20px;accent-color:#08745e"> 🔔 Bật nhắc việc</label></div>'
+   +(t.feedback?'<div class="tbox tb-fb">💬 Góp ý: '+esc(t.feedback)+'</div>':'')
+   +'<div class="acts"><button class="btn btn-light" onclick="closeSheet()">Hủy</button><button class="btn btn-main" id="okTask">Xong</button></div>');
+  setTimeout(()=>$('#tName').focus(),60);
+  $('#okTask').onclick=()=>{
+    const name=$('#tName').value.trim();if(!name){toast('Vui lòng nhập tên công việc.');return;}
+    Object.assign(t,{name,startDate:$('#tStart').value,endDate:$('#tEnd').value,expectedResult:$('#tExp').value.trim(),adjustedExpectedResult:$('#tSelf').value.trim(),hasReminder:$('#tRem').checked});
+    if(!t.adjustedExpectedResult)delete t.adjustedExpectedResult;
+    const dayObj=S.plan.days[day];dayObj.tasks=arr(dayObj.tasks);
+    if(isNewTask)dayObj.tasks.push(t);else dayObj.tasks=dayObj.tasks.map(x=>x.id===t.id?t:x);
+    // Như file gốc: hạn hoàn thành rơi vào ngày khác trong tuần → tự tạo việc ở ngày đó; vượt Thứ 7 → cảnh báo.
+    const sat=S.plan.days['Thứ 7']&&S.plan.days['Thứ 7'].date;
+    if(t.endDate&&sat&&t.endDate>sat)setTimeout(()=>toast('Ngày hoàn thành vượt quá tuần (đến Thứ 7). Bạn cần lập tuần tiếp theo cho công việc này.',4200),250);
+    else if(t.endDate&&t.endDate!==dayObj.date){
+      const target=DAY_NAMES.find(n=>S.plan.days[n]&&S.plan.days[n].date===t.endDate);
+      if(target&&target!==day){const tt=S.plan.days[target];tt.tasks=arr(tt.tasks);
+        if(!tt.tasks.find(x=>x.name===t.name)){tt.tasks.push({id:genId(),name:t.name,startDate:t.endDate,endDate:t.endDate,expectedResult:t.expectedResult||'',isCompleted:false,hasReminder:false});S.openDays.add(target);}}
+    }
+    S.openDays.add(day);closeSheet();markDirty();render();
+  };
+}
+function openCkSheet(id){
+  const it=id?arr(S.plan.monthlyChecklist).find(x=>x.id===id):null;
+  sheet('<h3>'+(it?'✎ Sửa checklist':'+ Thêm checklist')+'</h3><textarea class="field" id="ckText" rows="4" placeholder="Nội dung checklist tháng...">'+esc(it?it.content:'')+'</textarea><div class="acts" style="margin-top:12px"><button class="btn btn-light" onclick="closeSheet()">Hủy</button><button class="btn btn-main" id="okCk">Xong</button></div>');
+  setTimeout(()=>$('#ckText').focus(),60);
+  $('#okCk').onclick=()=>{const v=$('#ckText').value.trim();if(!v){toast('Vui lòng nhập nội dung.');return;}
+    const list=arr(S.plan.monthlyChecklist);
+    if(it)S.plan.monthlyChecklist=list.map(x=>x.id===it.id?{...x,content:v}:x);
+    else S.plan.monthlyChecklist=[...list,{id:genId(),content:v,isCompleted:false}];
+    closeSheet();markDirty();render();};
+}
+
+/* ---------- lưu: ghi + chờ Firebase xác nhận ---------- */
+async function save(){
+  if(!S.plan||S.saving)return;
+  if(!S.plan.employeeName||!S.plan.department){toast('Thiếu tên nhân viên hoặc bộ phận.');return;}
+  S.saving=true;updateSaveBar();
+  try{
+    const p=clone(S.plan);
+    p.employeeName=S.who.name;p.department=S.who.dept;
+    if(p.evaluationStatus==='Làm lại'){p.evaluationStatus='Cần bổ sung hoàn chỉnh';p.evaluationUpdatedAt=new Date().toISOString();}
+    if(S.isNew){
+      // Kiểm tra trùng: thiết bị khác có thể vừa lập tuần này
+      await loadPlans();const mon=ymd(mondayOf(p.creationDate));
+      const dup=S.myPlans.find(q=>q.creationDate&&ymd(mondayOf(q.creationDate))===mon);
+      if(dup){S.saving=false;if(confirm('Tuần này vừa có kế hoạch được lập ở thiết bị khác. Mở bản đó? (Thay đổi trên mobile sẽ bị bỏ)')){pickWeekPlan();render();}else updateSaveBar();return;}
+      await fb('weekly_plans/'+encodeURIComponent(p.id),{method:'PUT',body:p});
+    }else{
+      // Chỉ cập nhật các phần mobile chỉnh sửa → không ghi đè báo cáo, file, đánh giá BGĐ đã lưu từ máy tính.
+      const patch={objective:p.objective||'',monthlyChecklist:p.monthlyChecklist,employeeName:p.employeeName,department:p.department};
+      for(const n of DAY_NAMES)patch['days/'+n]=p.days[n];
+      if(p.evaluationStatus!==S.plan.evaluationStatus||p.evaluationUpdatedAt!==S.plan.evaluationUpdatedAt){patch.evaluationStatus=p.evaluationStatus;patch.evaluationUpdatedAt=p.evaluationUpdatedAt;}
+      await fb('weekly_plans/'+encodeURIComponent(p.id),{method:'PATCH',body:patch});
+    }
+    const verify=await fb('weekly_plans/'+encodeURIComponent(p.id));
+    if(!verify)throw new Error('Firebase chưa xác nhận bản kế hoạch sau khi lưu.');
+    const v=normalizePlan(verify,p.id);
+    const cnt=x=>DAY_NAMES.reduce((s,n)=>s+arr(x.days[n]&&x.days[n].tasks).length,0);
+    if(cnt(v)!==cnt(p)||String(v.objective||'')!==String(p.objective||''))throw new Error('Dữ liệu trên Firebase chưa khớp. Vui lòng bấm Lưu lại.');
+    S.plan=v;S.base=JSON.stringify(v);S.isNew=false;S.dirty=false;
+    const i=S.myPlans.findIndex(q=>q.id===v.id);if(i>=0)S.myPlans[i]=v;else S.myPlans.unshift(v);
+    S.myPlans.sort((a,b)=>String(b.creationDate||'').localeCompare(String(a.creationDate||'')));
+    toast('✅ Đã lưu & Firebase xác nhận thành công.');
+  }catch(e){toast('❌ Lưu chưa thành công: '+e.message,4500);}
+  finally{S.saving=false;render();}
+}
+
+/* ---------- sự kiện ---------- */
+function confirmLeave(){return !S.dirty||confirm('Có thay đổi chưa lưu. Bỏ thay đổi?');}
+function gotoWeek(dateStr){if(!confirmLeave())return;S.weekDate=dateStr;pickWeekPlan();render();}
+document.addEventListener('click',e=>{
+  const el=e.target.closest('[data-act]');if(!el)return;
+  const a=el.dataset.act,day=el.dataset.day,id=el.dataset.id;
+  if(a==='toggleDay'){S.openDays.has(day)?S.openDays.delete(day):S.openDays.add(day);el.parentElement.classList.toggle('open');return;}
+  if(a==='prevWeek')return gotoWeek(ymd(addDays(mondayOf(S.weekDate),-7)));
+  if(a==='nextWeek')return gotoWeek(ymd(addDays(mondayOf(S.weekDate),7)));
+  if(a==='thisWeek')return gotoWeek(ymd(new Date()));
+  if(a==='addTask')return openTaskSheet(day,null);
+  if(a==='editTask')return openTaskSheet(day,id);
+  if(a==='delTask'){if(!confirm('Bạn có chắc chắn muốn xóa công việc này?'))return;const d=S.plan.days[day];d.tasks=arr(d.tasks).filter(t=>t.id!==id);markDirty();render();return;}
+  if(a==='toggleDone'){const t=findTask(day,id);if(!t)return;if(!t.isCompleted)toast('Huyền nhắc: bạn đã chắc hoàn thành kết quả kỳ vọng chưa? Nếu chưa, hãy chọn “Tiếp tục”.',3800);
+    t.isCompleted=!t.isCompleted;if(t.isCompleted)t.isContinued=false;markDirty();render();return;}
+  if(a==='toggleCont'){const t=findTask(day,id);if(!t)return;t.isContinued=!t.isContinued;if(t.isContinued)t.isCompleted=false;markDirty();render();return;}
+  if(a==='ckAdd')return openCkSheet(null);
+  if(a==='ckEdit')return openCkSheet(id);
+  if(a==='ckDel'){if(!confirm('Xóa mục checklist này?'))return;S.plan.monthlyChecklist=arr(S.plan.monthlyChecklist).filter(x=>x.id!==id);markDirty();render();return;}
+  if(a==='openPlan'){if(!confirmLeave())return;const p=S.myPlans.find(x=>x.id===id);if(!p)return;S.weekDate=p.creationDate||S.weekDate;S.plan=normalizePlan(p,p.id);S.isNew=false;S.base=JSON.stringify(S.plan);S.dirty=false;S.openDays=new Set(DAY_NAMES.filter(n=>arr(S.plan.days[n].tasks).length));if(!S.openDays.size)S.openDays.add('Thứ 2');S.tab='plan';render();window.scrollTo(0,0);return;}
+});
+document.addEventListener('change',e=>{
+  if(e.target.id==='pickDate'&&e.target.value)gotoWeek(e.target.value);
+  if(e.target.dataset.act==='ckToggle'){const it=arr(S.plan.monthlyChecklist).find(x=>x.id===e.target.dataset.id);if(it){it.isCompleted=e.target.checked;markDirty();render();}}
+});
+document.addEventListener('input',e=>{if(e.target.id==='objective'){S.plan.objective=e.target.value;markDirty();}});
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{S.tab=b.dataset.tab;render();window.scrollTo(0,0);}));
+$('#whoBar').addEventListener('click',()=>openWhoSheet(false));
+$('#btnSave').addEventListener('click',save);
+$('#btnReload').addEventListener('click',()=>{if(confirmLeave())boot(true);});
+window.addEventListener('beforeunload',e=>{if(S.dirty){e.preventDefault();e.returnValue='';}});
+// Quay lại ứng dụng: tự làm mới nếu không có thay đổi dở dang (nhận cập nhật từ máy tính)
+document.addEventListener('visibilitychange',async()=>{
+  if(document.hidden||S.dirty||S.saving||!S.who.name)return;
+  try{const cur=S.plan&&S.plan.id;await loadPlans();const p=S.myPlans.find(x=>x.id===cur);
+    if(p){S.plan=normalizePlan(p,p.id);S.base=JSON.stringify(S.plan);S.isNew=false;}else pickWeekPlan();render();}catch{}
+});
+boot();
+</script>
+</body>
+</html>
